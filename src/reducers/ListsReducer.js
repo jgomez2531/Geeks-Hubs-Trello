@@ -77,6 +77,43 @@ const ListsReducer = (state = initialState, action) => {
 
             return newState;
 
+        case CONSTANTS.DRAG_HAPPENED: {
+
+            const {
+                droppableIdStart,
+                droppableIdEnd,
+                droppableIndexStart,
+                droppableIndexEnd,
+                draggableId
+            } = action.payload;
+
+            const newState = [...state];
+
+            //Mover tarjeta en la misma lista
+            if (droppableIdStart === droppableIdEnd) {
+                const list = state.find(list => droppableIdStart === list.id);
+                const card = list.cards.splice(droppableIndexStart, 1);
+                list.cards.splice(droppableIndexEnd, 0, ...card);
+            }
+
+            //Mover a otra lista
+            if(droppableIdStart  !== droppableIdEnd) {
+                //Buscar la lista cuando el arrastre de tarjeta suceda
+                const listStart = state.find(list => droppableIdStart === list.id);
+
+                //Extraer la tarjeta arrastrada de la lista
+                const card = listStart.cards.splice(droppableIndexStart, 1);
+
+                //Buscar la lista dónde hemos arrastrado la tarjeta
+                const listEnd = state.find(list=> droppableIdEnd === list.id);
+
+                //Meter la tarjeta en la lista nueva
+                listEnd.cards.splice(droppableIndexEnd, 0, ...card);
+            }
+
+            return newState;
+        }
+
         default:
             return state;
     }
