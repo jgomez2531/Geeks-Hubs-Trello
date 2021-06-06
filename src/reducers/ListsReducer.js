@@ -114,6 +114,15 @@ const ListsReducer = (state = initialState, action) => {
             return newState;
         }
 
+        case CONSTANTS.DEL_CARD: {
+
+            const newState = [...state];
+            const listStart = state.find(list => action.payload.listID === list.id);
+            const card = listStart.cards.splice(action.payload.cardID, 1);
+            
+            return newState;
+        }
+
         default:
             return state;
     }

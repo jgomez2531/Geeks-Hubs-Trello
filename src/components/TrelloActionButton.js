@@ -4,7 +4,7 @@ import TextArea from "react-textarea-autosize";
 import Card from '@material-ui/core/Card';
 import { Button } from "@material-ui/core";
 import { connect } from "react-redux";
-import { addList, addCard } from "../actions";
+import { addList, addCard, deleteCard } from "../actions";
 
 class TrelloActionButton extends React.Component {
 
@@ -62,6 +62,14 @@ class TrelloActionButton extends React.Component {
 
         return;
     }
+
+    handleDeleteCard = () => {
+        const { dispatch, listID } = this.props;
+        dispatch(deleteCard(listID));
+    
+        return;
+    }
+
     //Renderiza botón para añadir una nueva lista / tarjeta
     renderAddButton = () => {
         const {list} = this.props;

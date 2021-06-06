@@ -18,7 +18,8 @@ const TrelloList = ({title, cards, listID}) => {
                             index={index}
                             key={cards.id}
                             text={card.text}
-                            id={card.id} 
+                            id={card.id}
+                            listID={listID} 
                         />
                     ))}
                     <TrelloActionButton listID={listID} />
