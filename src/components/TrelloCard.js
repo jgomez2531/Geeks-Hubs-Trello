@@ -8,7 +8,7 @@ import TrelloDeleteButton from "./TrelloDeleteButton";
 
 const TrelloCard = ({text, id, index, listID}) => {
     return (
-        <Draggable draggableId={String(id)} index={index} >
+        <Draggable key={String(id)} draggableId={String(id)} index={index} >
             {provided => (
                 <div 
                     ref={provided.innerRef}

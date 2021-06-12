@@ -32,7 +32,7 @@ class App extends Component {
     return(
       <DragDropContext onDragEnd={this.onDragEnd} >
         <div className="App">
-          <h2>Hola Trello</h2>
+          <h2>RETO 3 - Trello Clone</h2>
           <div style={styles.listsContainer}>
             {lists.map(list => (
               <TrelloList

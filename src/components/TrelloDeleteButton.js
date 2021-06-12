@@ -17,8 +17,8 @@ class TrelloDeleteButton extends React.Component {
         const {list} = this.props;
 
         return (
-            <div onClick={this.handleDeleteCard} >
-                <Icon>delete</Icon>
+            <div>
+                <Icon onClick={this.handleDeleteCard}>delete</Icon>
             </div>
         );
 
