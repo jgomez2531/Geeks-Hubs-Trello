@@ -18,5 +18,5 @@
  > :white_check_mark:Redux
 
  ## Live Preview:
-:tv:
+:tv: https://trello-clone-react-redux.herokuapp.com/ 
 
