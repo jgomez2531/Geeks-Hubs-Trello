@@ -3,6 +3,9 @@
 
  **NOTA: No guarda la información en ninguna BD**
 
+![GrabaciÃ³n de pantalla 2021-06-13 a las 18 33 17](https://user-images.githubusercontent.com/76822966/121817433-c30a1f00-cc81-11eb-9d43-7333b776a90a.gif)
+
+
  ## Tecnologías:
  > :white_check_mark:HTML5
  >
