@@ -132,7 +132,7 @@ const ListsReducer = (state = initialState, action) => {
             const newState = [...state];
             const listStart = newState.find(list => listID === list.id);
 
-            listStart.cards.forEach(function(element) {
+            listStart.cards.forEach( element => {
                 if (element.id === cardID) {
                     const cardIndex = listStart.cards.indexOf(element);
                     listStart.cards.splice(cardIndex, 1);
