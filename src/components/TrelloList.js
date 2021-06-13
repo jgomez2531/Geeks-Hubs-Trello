@@ -10,7 +10,7 @@ const TrelloList = ({title, cards, listID}) => {
                 <div 
                     {...provided.droppableProps}
                     ref={provided.innerRef} 
-                    style={styles.container}
+                    className="containerApp"
                 >
                     <h4>{title}</h4>
                     {cards.map((card, index) => (
@@ -28,17 +28,6 @@ const TrelloList = ({title, cards, listID}) => {
             )}
         </Droppable>
     )
-}
-
-const styles = {
-    container: {
-        background: "#dfe3e6",
-        boderRadius: 3,
-        width: 300,
-        padding: 8,
-        marginRight: 8,
-        height: "100%"
-    }
 }
 
 export default TrelloList;

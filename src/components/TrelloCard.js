@@ -15,7 +15,7 @@ const TrelloCard = ({text, id, index, listID}) => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                 >
-                    <Card style={styles.cardContainer}>
+                    <Card className="cardContainer">
                         <CardContent>
                             <Typography gutterBottom>
                                 {text}
@@ -29,10 +29,5 @@ const TrelloCard = ({text, id, index, listID}) => {
       )
 };
 
-const styles = {
-    cardContainer: {
-        marginBottom: 8
-    }
-}
 
 export default TrelloCard;

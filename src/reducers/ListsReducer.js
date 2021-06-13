@@ -10,7 +10,7 @@ const initialState = [
         cards: [
             {
                 id: 'card-${0}',
-                text: "HTML5 / CSS3."
+                text: "HTML5 / CSS3"
             },
             {
                 id: 'card-${1}',
@@ -32,7 +32,7 @@ const initialState = [
         ]
     },
     {
-        title: "En este episodio",
+        title: "EXTRA Points",
         id: 'list-${1}',
         cards: [
             {

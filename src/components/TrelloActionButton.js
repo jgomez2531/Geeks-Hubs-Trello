@@ -82,15 +82,15 @@ class TrelloActionButton extends React.Component {
         return (
             <div
                 onClick={this.openForm}
+                className="openFormButtonGroup"
                 style={{
-                    ...styles.openFormButtonGroup,
                     opacity: buttonTextOpacity,
                     color: buttonTextColor,
-                    backgroundColor: buttonTextBackground
+                    backgroundColor: buttonTextBackground,
                 }}
             >
                 <Icon>add</Icon>
-                <p>{buttonText}</p>
+                <p className="buttonOpenFormAdd">{buttonText}</p>
             </div>
         );
 
@@ -107,37 +107,22 @@ class TrelloActionButton extends React.Component {
         const buttonTitle = list ? "Añadir Lista" : "Añadir Tarjeta";
 
         return <div>
-            <Card
-                style={{
-                    minHeight: 85,
-                    minWidth: 272,
-                    padding: "6px 8px 2px"
-                }}
-            >
+            <Card className="cardModal">
                 <TextArea 
                     placeholder={placeholder} 
                     autoFocus 
                     onBlur={this.closeForm}
                     onChange={this.handleInputChange}
-                    style={{
-                        resize: "none",
-                        width: "100%",
-                        overflow: "hidden",
-                        outline: "none",
-                        border: "none"
-                    }}
+                    className="textAreaModal"
                 />
             </Card>
-            <div style={styles.formButtonGroup}>
+            <div className="formButtonGroup">
                 <Button 
                     onMouseDown={ list ? this.handleAddList : this.handleAddCard}
                     variant="contained"
-                    style={{
-                        color: "white",
-                        backgroundColor: "#5aac44"
-                    }} 
+                    className="buttonModal"
                 >{buttonTitle}{" "}</Button>
-                <Icon style={{marginLeft: 8, cursor: "pointer"}}>close</Icon>
+                <Icon className="iconModal">close</Icon>
             </div>
         </div>
     };
@@ -148,23 +133,5 @@ class TrelloActionButton extends React.Component {
 
 }
 
-const styles = {
-
-    openFormButtonGroup: {
-        display: "flex",
-        alignItems: "center",
-        cursor: "pointer",
-        boderRadius: 3,
-        height: 36,
-        width: 272,
-        paddingLeft: 10
-    },
-
-    formButtonGroup: {
-        marginTop: 8,
-        display: "flex",
-        alignItems: "center"
-    }
-};
 
 export default connect() (TrelloActionButton);
