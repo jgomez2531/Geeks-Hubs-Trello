@@ -7,15 +7,15 @@
 
 
  ## Tecnologías:
- > :white_check_mark:HTML5
+ > :white_check_mark: HTML5
  >
- > :white_check_mark:CSS3
+ > :white_check_mark: CSS3
  >
- > :white_check_mark:JavaScript ES6
+ > :white_check_mark: JavaScript ES6
  >
- > :white_check_mark:React JS
+ > :white_check_mark: React JS
  >
- > :white_check_mark:Redux
+ > :white_check_mark: Redux
 
  ## Live Preview:
 :tv: https://trello-clone-react-redux.herokuapp.com/
