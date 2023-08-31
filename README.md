@@ -21,7 +21,6 @@
   <ol>
     <li><a href="#Sobre-este-proyecto">Sobre este proyecto</a></li>
     <li><a href="#Tecnologías">Tecnologías</a></li>
-    <li><a href="#APIs">APIs</a></li>
     <li><a href="#Implementación-local ">Implementación local</a></li>
     <li><a href="#Vista principal">Vista previa</a></li>
     <li><a href="#Licencia">Licencia</a></li>
